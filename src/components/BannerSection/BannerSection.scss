@@ -1,0 +1,57 @@
+@use '/src/styles/variables';
+
+#banners {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  width: 100%;
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+
+    input, button {
+      width: fit-content;
+    }
+  }
+
+  .banner-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: variables.$color-dark;
+    border-radius: 10px;
+
+    @media (min-width: variables.$desktop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      list-style: none;
+      cursor: pointer;
+      border-radius: 1rem;
+      filter: opacity(0.8);
+      transition: 0.1s ease;
+
+      &.selected {
+        filter: drop-shadow(5px 5px 0px variables.$color-purple-3) opacity(1);
+        transform: translate(-5px, -5px);
+
+        @media (min-width: variables.$desktop) {
+          filter: drop-shadow(10px 10px 0px variables.$color-purple-3)
+            opacity(1);
+          transform: translate(-10px, -10px);
+        }
+      }
+
+      &.selected-transparent {
+        filter: none;
+        transform: none;
+        outline: 0.5rem solid variables.$color-purple-3;
+      }
+    }
+  }
+}

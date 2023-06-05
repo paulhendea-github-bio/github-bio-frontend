@@ -1,0 +1,26 @@
+@use "/src/styles/variables";
+
+main#result {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  section.result {
+    width: 100%;
+    max-width: variables.$max-width;
+    padding-inline: 2rem;
+  
+    .button-container {
+      display: flex;
+      margin-block-end: 1rem;
+      gap: 1rem;
+    }
+    
+    .code {
+      padding: 1rem 2rem;
+      overflow: auto;
+      background-color: variables.$color-dark;
+      border-radius: 10px;
+    }
+  }  
+}

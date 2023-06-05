@@ -1,0 +1,117 @@
+@use '/src/styles/variables';
+
+header#home-header {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(./landing-background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+  }
+
+  .logo {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  p {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  form {
+    margin-block-start: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+
+    @media (min-width: variables.$desktop) {
+      flex-flow: row nowrap;      
+    }
+
+    button {
+      background-color: variables.$color-black;
+    }
+  }
+}
+
+main#home-main {  
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 20vh;
+
+  section#how-to {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding: 2rem;
+
+    @media (min-width: variables.$desktop) {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    header {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+
+      .github-icon {
+        display: none;
+        flex: 1;
+        width: 80%;
+        color: variables.$color-purple-1;
+
+        @media (min-width: variables.$desktop) {
+          display: block;
+        }
+      }
+    }
+
+    ol {
+      height: fit-content;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+
+      @media (min-width: variables.$desktop) {
+        padding-inline-start: 2rem;
+      }
+
+      li {
+        padding: 1rem;
+        background-color: variables.$color-dark;
+        border-radius: 1rem;
+        list-style-type: none;
+
+        @media (min-width: variables.$desktop) {
+          list-style-type: decimal;
+        }
+
+        &::marker,
+        strong,
+        .fa-icon {
+          color: variables.$color-purple-3;
+        }
+      }
+    }
+  }
+}

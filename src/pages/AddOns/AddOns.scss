@@ -1,0 +1,13 @@
+@use '/src/styles/variables';
+
+main#add-ons {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 4rem;
+  
+  section {
+    padding: 1rem 2rem;
+    max-width: variables.$max-width;
+  }
+}

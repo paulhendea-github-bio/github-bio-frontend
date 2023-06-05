@@ -1,0 +1,44 @@
+@use '/src/styles/variables';
+
+.skill-list-item {
+  width: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  line-height: normal;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: variables.$desktop) {
+    width: 100px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+    filter: opacity(.6);
+    transition: .1s ease;
+  }
+
+  small {
+    display: none;
+    font-family: 'Fira Mono', monospace;
+    font-size: .8rem;
+
+    @media (min-width: variables.$desktop) {
+      display: block;
+    }
+  }
+}
+
+.skill-list-item-enabled img {
+  filter: drop-shadow(5px 5px 0px variables.$color-purple-3) opacity(1);
+  transform: translate(-5px, -5px);
+
+  @media (min-width: variables.$desktop) {
+    filter: drop-shadow(10px 10px 0px variables.$color-purple-3) opacity(1);
+    transform: translate(-10px, -10px);
+  }
+}

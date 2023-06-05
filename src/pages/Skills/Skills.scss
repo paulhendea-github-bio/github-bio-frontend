@@ -1,0 +1,10 @@
+@use "/src/styles/variables";
+
+main#skill-page {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 2rem;
+}

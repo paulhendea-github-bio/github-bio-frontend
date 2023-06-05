@@ -1,0 +1,20 @@
+@use '/src/styles/variables';
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: variables.$color-white;
+    border-bottom: 1px solid variables.$color-purple-3;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: variables.$color-purple-3;
+    }
+  }
+}

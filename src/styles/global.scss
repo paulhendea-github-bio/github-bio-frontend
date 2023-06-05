@@ -1,0 +1,88 @@
+@use '/src/styles/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Fira Mono', monospace;
+  font-size: 16px;
+  line-height: 1.5rem;
+
+  color-scheme: dark;
+  color: variables.$color-white;
+  background-color: variables.$color-black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-content: center;
+  width: 100%;
+  min-height: 100vh;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  #root {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    main {
+      width: 100%;
+      margin-block-end: 10rem;
+    }
+  }
+
+  form {
+    fieldset {
+      border: none;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+    }
+
+    input[type='text'] {
+      height: 3rem;
+      font-family: 'Fira Mono', monospace;
+      font-size: 1rem;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      color: variables.$color-white;
+      background: variables.$color-dark;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      transition: 1s ease;
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.1),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+
+      &::placeholder {
+        color: variables.$color-white;
+        transition: 0.3s ease;
+      }
+
+      &:focus::placeholder,
+      &:hover::placeholder {
+        opacity: 0.2;
+      }
+    }
+  }
+}
