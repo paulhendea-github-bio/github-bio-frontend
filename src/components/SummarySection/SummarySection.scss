@@ -1,0 +1,24 @@
+@use "/src/styles/variables";
+
+section#openai-summary {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  
+  #openai-summary-value {
+    padding: 1rem 2rem;
+    color: variables.$color-purple-3;
+    background-color: variables.$color-dark;
+    border-radius: 10px;
+  
+    .error {
+      margin-block-start: 1rem;
+      color: red;
+    }    
+  }
+
+  button.summary-button {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,35 @@
+@use "/src/styles/variables";
+
+main.details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  section {
+    max-width: variables.$max-width;
+    margin-inline: 2rem;
+
+    form {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 2rem;
+
+      fieldset {
+        max-width: 500px;
+        padding: 1.5rem;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        border: 2px solid rgb(variables.$color-purple-1, 1);
+        border-radius: 10px;
+
+        legend {
+          padding-inline: .5rem;
+          color: variables.$color-white;
+        }
+      }
+    }
+  }
+
+}

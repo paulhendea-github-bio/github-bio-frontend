@@ -1,0 +1,40 @@
+@use "/src/styles/variables";
+
+.skill-category {
+  width: 100%;
+  max-width: variables.$max-width;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  background-color: variables.$color-dark;
+  border-radius: 1rem;
+
+  @media (min-width: variables.$desktop) {
+    padding: 2rem;
+  }
+  
+  h1 {
+    color: variables.$color-white;
+  }
+  
+  .skill-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    justify-content: center;
+    gap: 1rem;
+    margin-block-start: 2rem;
+    list-style-type: none;
+
+    @media (min-width: variables.$desktop) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 100px);
+      gap: 2rem;
+      margin-block-start: 2rem;
+      list-style-type: none;
+    }
+  }
+}
