@@ -17,7 +17,7 @@ export function Footer() {
         </a>
         {' '}<FontAwesomeIcon icon={faCode} />{' '}
         <a
-          href="https://github.com/paulhendea-github-bio/github-bio-api"
+          href="https://github.com/paulhendea-github-bio"
           aria-label="GitHub project repository"
           target="_blank" rel="noreferrer"
         >
