@@ -35,7 +35,7 @@ export function Home() {
       <header id="home-header">
         <div className="background"></div>
         <img src="./logo.svg" alt="github-bio logo" className="logo" />
-        <p>Start creating your new awesome profile readme</p>
+        <p>Start creating your new awesome readme profile</p>
         <form onSubmit={handleSubmit}>
           <input type="text" name="username" placeholder="GitHub username" value={username} onChange={handleUsername} />
           <Button type="submit">
