@@ -1,7 +1,7 @@
 import { Route, Switch, useLocation } from 'wouter'
 import { Home } from './pages/Home/Home'
 import { Details } from './pages/Details/Details'
-import { AppContext, AppContextProvider } from './contexts/AppContext'
+import { AppContext } from './contexts/AppContext'
 import { Skills } from './pages/Skills/Skills'
 import { AddOns } from './pages/AddOns/AddOns'
 import { ErrorPage } from './pages/ErrorPage/ErrorPage'
