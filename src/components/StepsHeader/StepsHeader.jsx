@@ -1,25 +1,17 @@
 import './StepsHeader.scss'
 import { STEPS } from '../../constants'
 import PropTypes from 'prop-types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faInfoCircle,
-  faLaptopCode,
-  faWandMagicSparkles,
-} from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames'
 import { Link, useLocation } from 'wouter'
 import { Button } from '../Button/Button'
-import { useContext, useEffect } from 'react'
-import { AppContext } from '../../contexts/AppContext'
 import { Logo } from '../Logo/Logo'
 
-const stepsIcons = {
-  '/details': faInfoCircle,
-  '/skills': faLaptopCode,
-  '/addons': faWandMagicSparkles,
-}
 
+const stepsLabel = {
+  '/details': 'Details',
+  '/skills': 'Skills',
+  '/addons': 'AddOns',
+}
 StepsHeader.propTypes = {
   children: PropTypes.node,
 }
@@ -58,7 +50,7 @@ export function StepsHeader({ children }) {
                         selected: step === location,
                       })}
                     >
-                      <FontAwesomeIcon icon={stepsIcons[step]} />
+                      {stepsLabel[step]}
                     </div>
                   </div>
                 </Link>
