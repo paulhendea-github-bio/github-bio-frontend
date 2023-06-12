@@ -56,11 +56,11 @@ header {
 
         .icon {
           position: absolute;
-          top: -60px;
-          font-size: 40px;
+          top: -50px;
+          font-size: 1rem;
           color: variables.$color-white;
           transition: color 0.2s ease;
-          opacity: 0.6;
+          opacity: 0.4;
 
           &.selected {
             opacity: 1;
